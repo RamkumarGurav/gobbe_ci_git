@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="dashboard">
+        <div class="ds-main">
+            <div class="dsm-navigation">
+                <div class="dsm-nav-inner">
+                    <div class="dsmn-logo">
+                        <a href="#"><img src="assets/img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="dsmn-menu">
+                        <div class="dsmn-m-li">
+                            <ul class="nav mb-3">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="overview.html"><span><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> Dashboard</span></a>
+                                </li>
+                                <li class="nav-item  nav-item-active">
+                                    <div class="nav-item-drop">
+                                        <div class="nid-li">
+                                            <span class="menu menu-active"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"></path><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"></path><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"></path><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"></path><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"></path><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"></path><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"></path></svg> Catalog <i
+                                                    class="fa-solid fa-chevron-right"></i></span>
+                                        </div>
+                                        <div class="nid-con nid-con-b">
+                                            <a class="nav-link" href="products.html">Products</a>
+                                            <a class="nav-link" href="categories.html">Categories</a>
+                                            <a class="nav-link active" href="attributes.html">Attributes</a>
+                                            <a class="nav-link" href="coupons.html">Coupons</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="customers.html"><span><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> Customers</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="orders.html"><span><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg> Orders</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="our-staff.html"><span><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Our
+                                            Staff</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><span><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Settings</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="nav-item-drop">
+                                        <div class="nid-li">
+                                            <span class="menu"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> International <i
+                                                    class="fa-solid fa-chevron-right"></i></span>
+                                        </div>
+                                        <div class="nid-con">
+                                            <a class="nav-link" href="#">Languages</a>
+                                            <a class="nav-link" href="#">Currencies</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <div class="nav-item-drop">
+                                        <div class="nid-li">
+                                            <span class="menu"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg> Online
+                                                Store <i class="fa-solid fa-chevron-right"></i></span>
+                                        </div>
+                                        <div class="nid-con">
+                                            <a class="nav-link" href="#">View Store</a>
+                                            <a class="nav-link" href="#">Store Cusomization</a>
+                                            <a class="nav-link" href="#">Store Settings</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dsmn-logout">
+                        <a href="#" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dsm-content">
+                <div class="dsm-header">
+                    <div class="dsm-head-inner">
+                        <div class="dsm-toggle">
+                            <span class="toggle-btn"><i class="fa-solid fa-bars"></i></span>
+                        </div>
+                        <div class="dsm-user-menu">
+                            <div class="dsm-notification">
+                                <span class="dhm-head-notified"><i class="fa-solid fa-bell"></i><span
+                                        class="noti-dig">04</span></span>
+                                <div class="dhm-hn-con">
+                                    <div class="dhm-hnc-inner">
+                                        <ul>
+                                            <li><a href="#">
+                                                    <div class="dhm-hl">
+                                                        <div class="dhm-hl-l">
+                                                            <img src="assets/img/dummy.jpg" alt="notification-image">
+                                                        </div>
+                                                        <div class="dhm-hl-r">
+                                                            <p>Dashpro Company, Placed 2000.00 RS Order!</p>
+                                                            <span class="not-badge">New Order</span> <span
+                                                                class="not-time">Apr 10, 2024 12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dhm-hr">
+                                                        <div class="dhm-delete">
+                                                            <span class="not-delete"><i
+                                                                    class="fa-solid fa-trash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <div class="dhm-hl">
+                                                        <div class="dhm-hl-l">
+                                                            <img src="assets/img/dummy.jpg" alt="notification-image">
+                                                        </div>
+                                                        <div class="dhm-hl-r">
+                                                            <p>Dashpro Company, Placed 2000.00 RS Order!</p>
+                                                            <span class="not-badge">New Order</span> <span
+                                                                class="not-time">Apr 10, 2024 12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dhm-hr">
+                                                        <div class="dhm-delete">
+                                                            <span class="not-delete"><i
+                                                                    class="fa-solid fa-trash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <div class="dhm-hl">
+                                                        <div class="dhm-hl-l">
+                                                            <img src="assets/img/dummy.jpg" alt="notification-image">
+                                                        </div>
+                                                        <div class="dhm-hl-r">
+                                                            <p>Dashpro Company, Placed 2000.00 RS Order!</p>
+                                                            <span class="not-badge">New Order</span> <span
+                                                                class="not-time">Apr 10, 2024 12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dhm-hr">
+                                                        <div class="dhm-delete">
+                                                            <span class="not-delete"><i
+                                                                    class="fa-solid fa-trash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <div class="dhm-hl">
+                                                        <div class="dhm-hl-l">
+                                                            <img src="assets/img/dummy.jpg" alt="notification-image">
+                                                        </div>
+                                                        <div class="dhm-hl-r">
+                                                            <p>Dashpro Company, Placed 2000.00 RS Order!</p>
+                                                            <span class="not-badge">New Order</span> <span
+                                                                class="not-time">Apr 10, 2024 12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dhm-hr">
+                                                        <div class="dhm-delete">
+                                                            <span class="not-delete"><i
+                                                                    class="fa-solid fa-trash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <div class="dhm-hl">
+                                                        <div class="dhm-hl-l">
+                                                            <img src="assets/img/dummy.jpg" alt="notification-image">
+                                                        </div>
+                                                        <div class="dhm-hl-r">
+                                                            <p>Dashpro Company, Placed 2000.00 RS Order!</p>
+                                                            <span class="not-badge">New Order</span> <span
+                                                                class="not-time">Apr 10, 2024 12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dhm-hr">
+                                                        <div class="dhm-delete">
+                                                            <span class="not-delete"><i
+                                                                    class="fa-solid fa-trash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <div class="dhm-hl">
+                                                        <div class="dhm-hl-l">
+                                                            <img src="assets/img/dummy.jpg" alt="notification-image">
+                                                        </div>
+                                                        <div class="dhm-hl-r">
+                                                            <p>Dashpro Company, Placed 2000.00 RS Order!</p>
+                                                            <span class="not-badge">New Order</span> <span
+                                                                class="not-time">Apr 10, 2024 12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dhm-hr">
+                                                        <div class="dhm-delete">
+                                                            <span class="not-delete"><i
+                                                                    class="fa-solid fa-trash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <div class="dhm-hl">
+                                                        <div class="dhm-hl-l">
+                                                            <img src="assets/img/dummy.jpg" alt="notification-image">
+                                                        </div>
+                                                        <div class="dhm-hl-r">
+                                                            <p>Dashpro Company, Placed 2000.00 RS Order!</p>
+                                                            <span class="not-badge">New Order</span> <span
+                                                                class="not-time">Apr 10, 2024 12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dhm-hr">
+                                                        <div class="dhm-delete">
+                                                            <span class="not-delete"><i
+                                                                    class="fa-solid fa-trash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <div class="dhm-hl">
+                                                        <div class="dhm-hl-l">
+                                                            <img src="assets/img/dummy.jpg" alt="notification-image">
+                                                        </div>
+                                                        <div class="dhm-hl-r">
+                                                            <p>Dashpro Company, Placed 2000.00 RS Order!</p>
+                                                            <span class="not-badge">New Order</span> <span
+                                                                class="not-time">Apr 10, 2024 12:30 PM</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="dhm-hr">
+                                                        <div class="dhm-delete">
+                                                            <span class="not-delete"><i
+                                                                    class="fa-solid fa-trash"></i></span>
+                                                        </div>
+                                                    </div>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dsm-user-box">
+                                <span class="user-profile"><img src="assets/img/user.jpg" alt="user-profiles"></span>
+                                <div class="dsm-ub-con">
+                                    <div class="dsm-ubc-inner">
+                                        <ul>
+                                            <li><a href="#"><i class="fa-solid fa-boxes-stacked"></i> Dashboard</a></li>
+                                            <li><a href="#"><i class="fa-solid fa-user-pen"></i> Edit Profile</a></li>
+                                            <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i> Log Out</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="dsm-main-content">
+                    <div class="cmc-tab">
+                        <div class="tab-pane-inner">
+                            <div class="tpi-title">
+                                <h4>Attributes</h4>
+                            </div>
+                            <div class="tpi-product-row">
+                                <div class="tpi-pr-inner">
+                                    <div class="tpi-pri-l">
+                                        <div class="tpi-pri-export">
+                                            <a href="#" class="btn1 export-btn"><i
+                                                    class="fa-solid fa-file-export"></i> Export</a>
+                                            <div class="exp-dd">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa-solid fa-file"></i> Export
+                                                            to
+                                                            CSV</a></li>
+                                                    <li><a href="#"><i class="fa-solid fa-file"></i> Export
+                                                            to
+                                                            JSON</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="tpi-pri-import">
+                                            <a href="#" class="btn1 import-btn"><i
+                                                    class="fa-solid fa-file-import"></i> Import</a>
+                                            <div class="impt-con">
+                                                <div class="impt-con-inner">
+                                                    <input type="file" name="import-pro" id="import-pro">
+                                                    <button><i class="fa-solid fa-plus"></i> Import
+                                                        Now</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tpi-pri-r">
+                                        <div class="tpi-bulk-action">
+                                            <a href="#" class="btn1"><i class="fa-solid fa-pen-to-square"></i>
+                                                Bulk
+                                                Action</a>
+                                        </div>
+                                        <div class="tpi-delete">
+                                            <a href="#" class="btn3"><i class="fa-solid fa-trash"></i>
+                                                Delete</a>
+                                        </div>
+                                        <div class="tpi-cate-add">
+                                            <a href="#" class="btn2 attr-add"><i class="fa-solid fa-plus"></i>
+                                                Add Attributes</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-filter-row">
+                                <div class="tfr-inner">
+                                    <!-- <div class="tfr-box"> -->
+                                    <div class="tfrb-search">
+                                        <input type="text" name="attributes-search" id="attributes-search"
+                                            placeholder="Search By Attributes Name" class="form-control">
+                                    </div>
+                                    <div class="tfrb-btn">
+                                        <a href="#" class="btn2">Filter</a>
+                                        <a href="#" class="btn1">Reset</a>
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            
+                            <div class="tpi-product-table">
+                                
+                                <div class="tpt-inner">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td class="px-4 py-2 "><input class="selectAll" name="selectAll"
+                                                        type="checkbox"></td>
+                                                <td class="px-4 py-2 ">ID</td>
+                                                <td class="px-4 py-2 ">NAME</td>
+                                                <td class="px-4 py-2 ">Display Name</td>
+                                                <td class="px-4 py-2 ">Option</td>
+                                                <td class="px-4 py-2 text-center">PUBLISHED</td>
+                                                <td class="px-4 py-2 text-center">Values</td>
+                                                <td class="px-4 py-2 text-center">ACTIONS</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="px-4 py-2"><input class="selectAll" name="selectAll"
+                                                        type="checkbox"></td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpi-aid">
+                                                        91X4
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-aname">
+                                                        Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adnam">
+                                                            Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adrp">
+                                                            Dropdown
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-publishd-btn">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2 text-center">
+                                                    <div class="tpt-avalue-edit">
+                                                        <a href="#"><i
+                                                                class="fa-solid fa-pen-to-square"></i></a>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-action-btn">
+                                                        <div class="tpt-atr-edit">
+                                                            <a href="#"><i
+                                                                    class="fa-solid fa-pen-to-square"></i></a>
+                                                        </div>
+                                                        <div class="tpt-ab-delete">
+                                                            <a href="#"><i class="fa-solid fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2"><input class="selectAll" name="selectAll"
+                                                        type="checkbox"></td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpi-aid">
+                                                        91X4
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-aname">
+                                                        Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adnam">
+                                                            Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adrp">
+                                                            Dropdown
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-publishd-btn">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2 text-center">
+                                                    <div class="tpt-avalue-edit">
+                                                        <a href="#"><i
+                                                                class="fa-solid fa-pen-to-square"></i></a>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-action-btn">
+                                                        <div class="tpt-atr-edit">
+                                                            <a href="#"><i
+                                                                    class="fa-solid fa-pen-to-square"></i></a>
+                                                        </div>
+                                                        <div class="tpt-ab-delete">
+                                                            <a href="#"><i class="fa-solid fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2"><input class="selectAll" name="selectAll"
+                                                        type="checkbox"></td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpi-aid">
+                                                        91X4
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-aname">
+                                                        Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adnam">
+                                                            Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adrp">
+                                                            Dropdown
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-publishd-btn">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2 text-center">
+                                                    <div class="tpt-avalue-edit">
+                                                        <a href="#"><i
+                                                                class="fa-solid fa-pen-to-square"></i></a>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-action-btn">
+                                                        <div class="tpt-atr-edit">
+                                                            <a href="#"><i
+                                                                    class="fa-solid fa-pen-to-square"></i></a>
+                                                        </div>
+                                                        <div class="tpt-ab-delete">
+                                                            <a href="#"><i class="fa-solid fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2"><input class="selectAll" name="selectAll"
+                                                        type="checkbox"></td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpi-aid">
+                                                        91X4
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-aname">
+                                                        Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adnam">
+                                                            Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adrp">
+                                                            Dropdown
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-publishd-btn">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2 text-center">
+                                                    <div class="tpt-avalue-edit">
+                                                        <a href="#"><i
+                                                                class="fa-solid fa-pen-to-square"></i></a>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-action-btn">
+                                                        <div class="tpt-atr-edit">
+                                                            <a href="#"><i
+                                                                    class="fa-solid fa-pen-to-square"></i></a>
+                                                        </div>
+                                                        <div class="tpt-ab-delete">
+                                                            <a href="#"><i class="fa-solid fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2"><input class="selectAll" name="selectAll"
+                                                        type="checkbox"></td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpi-aid">
+                                                        91X4
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-aname">
+                                                        Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adnam">
+                                                            Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adrp">
+                                                            Dropdown
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-publishd-btn">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2 text-center">
+                                                    <div class="tpt-avalue-edit">
+                                                        <a href="#"><i
+                                                                class="fa-solid fa-pen-to-square"></i></a>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-action-btn">
+                                                        <div class="tpt-atr-edit">
+                                                            <a href="#"><i
+                                                                    class="fa-solid fa-pen-to-square"></i></a>
+                                                        </div>
+                                                        <div class="tpt-ab-delete">
+                                                            <a href="#"><i class="fa-solid fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                            <tr>
+                                                <td class="px-4 py-2"><input class="selectAll" name="selectAll"
+                                                        type="checkbox"></td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpi-aid">
+                                                        91X4
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-aname">
+                                                        Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adnam">
+                                                            Color
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <span class="tpt-adrp">
+                                                            Dropdown
+                                                    </span>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-publishd-btn">
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2 text-center">
+                                                    <div class="tpt-avalue-edit">
+                                                        <a href="#"><i
+                                                                class="fa-solid fa-pen-to-square"></i></a>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-2">
+                                                    <div class="tpt-action-btn">
+                                                        <div class="tpt-atr-edit">
+                                                            <a href="#"><i
+                                                                    class="fa-solid fa-pen-to-square"></i></a>
+                                                        </div>
+                                                        <div class="tpt-ab-delete">
+                                                            <a href="#"><i class="fa-solid fa-trash"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+
+
+                                            </tr>
+                                          
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tpi-add-attr">
+                                <div class="tpa-conp-inner">
+                                    <div class="tpci-head">
+                                        <div class="tpci-row-one">
+                                            <div class="tpci-ro-inner">
+                                                <div class="tpci-roi-l">
+                                                    <h4>Add Attribute Value</h4>
+                                                    <p>Add your attribute values and necessary information from here</p>
+                                                </div>
+                                                <div class="tpci-roi-r">
+                                                    <span class="tpa-conp-close"><i
+                                                            class="fa-solid fa-xmark"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tpci-tab-con">
+                                        <div class="ttc-pro-inner">
+                                            <div class="form-group">
+                                                <label for="atr-title" class="form-label">Attribute Title</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Color or Size or Dimension or Material or Fabric" id="atr-title">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="atr-dname" class="form-label">Display Name</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Display Name" id="atr-dname">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="form-label">Options</label>
+                                                <select name="atr-option" id="atr-option" class="form-select">
+                                                    <option>Select Type</option>
+                                                    <option value="dropdown">Dropdown</option>
+                                                    <option value="radio">Radio</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="atr-variants" class="form-label">Variants</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Variants" id="atr-variants">
+                                            </div>
+                                           
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="tpci-bottom">
+                                        <div class="tpbt-inner">
+                                            <a href="#" class="btn1 bg-ff tpc-cancel">Cancel</a>
+                                            <a href="#" class="btn2">Add Product</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tpi-edit-attr">
+                                <div class="tpa-conp-inner">
+                                    <div class="tpci-head">
+                                        <div class="tpci-row-one">
+                                            <div class="tpci-ro-inner">
+                                                <div class="tpci-roi-l">
+                                                    <h4>Update Attribute Value</h4>
+                                                    <p>Updated your attribute values and necessary information from here</p>
+                                                </div>
+                                                <div class="tpci-roi-r">
+                                                    <span class="tpa-conp-close"><i
+                                                            class="fa-solid fa-xmark"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tpci-tab-con">
+                                        <div class="ttc-pro-inner">
+                                            <div class="form-group">
+                                                <label for="atr-title" class="form-label">Attribute Title</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Color or Size or Dimension or Material or Fabric" id="atr-title">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="atr-dname" class="form-label">Display Name</label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Display Name" id="atr-dname">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="" class="form-label">Options</label>
+                                                <select name="atr-option" id="atr-option" class="form-select">
+                                                    <option>Select Type</option>
+                                                    <option value="dropdown">Dropdown</option>
+                                                    <option value="radio">Radio</option>
+                                                </select>
+                                            </div>
+                                           
+                                           
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="tpci-bottom">
+                                        <div class="tpbt-inner">
+                                            <a href="#" class="btn1 bg-ff tpc-cancel">Cancel</a>
+                                            <a href="#" class="btn2">Add Product</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-qFOQ9YFAeGj1gDOuUD61g3D+tLDv3u1ECYWqT82WQoaWrOhAY+5mRMTTVsQdWutbA5FORCnkEPEgU0OF8IzGvA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+    
+$(".attr-add").click(function () {
+  $(".tpi-add-attr").toggleClass("tpi-add-attr-b");
+});
+$(".tpa-conp-close").click(function () {
+  $(".tpi-add-attr").removeClass("tpi-add-attr-b");
+});
+$(".tpc-cancel").click(function () {
+  $(".tpi-add-attr").removeClass("tpi-add-attr-b");
+});
+
+$(".tpt-atr-edit").click(function () {
+  $(".tpi-edit-attr").toggleClass("tpi-edit-attr-b");
+});
+$(".tpa-conp-close").click(function () {
+  $(".tpi-edit-attr").removeClass("tpi-edit-attr-b");
+});
+$(".tpc-cancel").click(function () {
+  $(".tpi-edit-attr").removeClass("tpi-edit-attr-b");
+});
+</script>
+</body>
+</html>
+
